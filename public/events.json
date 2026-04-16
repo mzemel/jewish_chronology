@@ -1,0 +1,242 @@
+[
+  {
+    "year": 70,
+    "title": "Destruction of the Second Temple",
+    "description": "Roman forces under Titus destroy the Second Temple in Jerusalem, marking the beginning of the Jewish diaspora from Judea.",
+    "impact": "dispersal"
+  },
+  {
+    "year": 135,
+    "title": "Bar Kokhba Revolt",
+    "description": "After the failed revolt, Emperor Hadrian expels Jews from Jerusalem and renames the province Syria Palaestina. Approximately 580,000 Jews killed.",
+    "impact": "dispersal"
+  },
+  {
+    "year": 224,
+    "title": "Sasanian Empire rises",
+    "description": "Under Sasanian rule, Babylonian Jewry flourishes. The great academies of Sura and Pumbedita produce the Babylonian Talmud.",
+    "impact": "growth"
+  },
+  {
+    "year": 632,
+    "title": "Rise of Islam",
+    "description": "Jewish communities across the Middle East and North Africa come under Islamic rule. Generally tolerated as dhimmis, many communities thrive as merchants and scholars.",
+    "impact": "neutral"
+  },
+  {
+    "year": 711,
+    "title": "Moorish conquest of Iberia",
+    "description": "Muslim conquest of the Iberian Peninsula begins a golden age for Sephardic Jewry under relatively tolerant Islamic rule.",
+    "impact": "growth"
+  },
+  {
+    "year": 1096,
+    "title": "First Crusade pogroms",
+    "description": "Crusader mobs massacre Jewish communities in the Rhineland (Speyer, Worms, Mainz, Cologne). Thousands killed. Many Jews flee eastward.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1144,
+    "title": "First blood libel (Norwich)",
+    "description": "The first recorded blood libel accusation against Jews occurs in Norwich, England, setting a pattern of false accusations across medieval Europe.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1182,
+    "title": "Expulsion from France (Philip II)",
+    "description": "Philip II expels Jews from royal French domains and confiscates their property. They are readmitted in 1198.",
+    "impact": "expulsion"
+  },
+  {
+    "year": 1290,
+    "title": "Expulsion from England",
+    "description": "Edward I expels all Jews from England via the Edict of Expulsion. Jews would not officially return until 1657.",
+    "impact": "expulsion"
+  },
+  {
+    "year": 1306,
+    "title": "Expulsion from France",
+    "description": "Philip IV expels all Jews from France and confiscates their property. Multiple cycles of expulsion and readmission follow.",
+    "impact": "expulsion"
+  },
+  {
+    "year": 1348,
+    "title": "Black Death persecutions",
+    "description": "Jews are blamed for the Black Death across Europe. Hundreds of communities destroyed, thousands murdered. Major massacres in Strasbourg, Basel, and throughout the Rhineland.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1394,
+    "title": "Final expulsion from France",
+    "description": "Charles VI permanently expels Jews from France. Many migrate to the Low Countries, Italy, and Eastern Europe.",
+    "impact": "expulsion"
+  },
+  {
+    "year": 1492,
+    "title": "Expulsion from Spain",
+    "description": "The Alhambra Decree orders all Jews to convert or leave Spain. An estimated 100,000–200,000 Jews expelled. Sephardic diaspora spreads to the Ottoman Empire, North Africa, and the Netherlands.",
+    "impact": "expulsion"
+  },
+  {
+    "year": 1497,
+    "title": "Expulsion from Portugal",
+    "description": "King Manuel I orders Jews to convert or leave Portugal, largely to satisfy conditions of his marriage alliance with Spain. Most are forcibly converted rather than expelled.",
+    "impact": "expulsion"
+  },
+  {
+    "year": 1516,
+    "title": "Venice Ghetto established",
+    "description": "The Republic of Venice confines Jews to the Ghetto Nuovo, creating the first formal Jewish ghetto in Europe. The model spreads across the continent.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1569,
+    "title": "Papal expulsion from most of Italy",
+    "description": "Pope Pius V expels Jews from the Papal States except Rome and Ancona, pushing many toward Eastern Europe and the Ottoman Empire.",
+    "impact": "expulsion"
+  },
+  {
+    "year": 1648,
+    "title": "Khmelnytsky massacres",
+    "description": "The Cossack uprising led by Bohdan Khmelnytsky devastates Jewish communities in Ukraine and Poland. Estimated 100,000 Jews killed, hundreds of communities destroyed.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1654,
+    "title": "Jews arrive in New Amsterdam",
+    "description": "A group of 23 Sephardic Jews arrives in New Amsterdam (later New York), establishing the first Jewish community in North America.",
+    "impact": "migration"
+  },
+  {
+    "year": 1740,
+    "title": "Golden age of Polish-Lithuanian Jewry",
+    "description": "Despite periodic violence, the Jewish population of Poland-Lithuania grows to become the largest Jewish community in the world, centered around yeshivot and Hasidic movements.",
+    "impact": "growth"
+  },
+  {
+    "year": 1772,
+    "title": "First Partition of Poland",
+    "description": "The partitions of Poland (1772, 1793, 1795) divide the largest Jewish community among Russia, Prussia, and Austria. Russia inherits millions of Jews it never wanted.",
+    "impact": "dispersal"
+  },
+  {
+    "year": 1791,
+    "title": "Pale of Settlement established",
+    "description": "Catherine the Great confines Jews to the Pale of Settlement — western regions of the Russian Empire (modern Lithuania, Belarus, Ukraine, Moldova, and eastern Poland).",
+    "impact": "persecution"
+  },
+  {
+    "year": 1791,
+    "title": "French emancipation",
+    "description": "Revolutionary France becomes the first European country to grant full citizenship to Jews, beginning the era of Jewish emancipation in Western Europe.",
+    "impact": "growth"
+  },
+  {
+    "year": 1881,
+    "title": "Russian pogroms begin",
+    "description": "Following the assassination of Tsar Alexander II, waves of anti-Jewish violence sweep southern Russia and Ukraine. Triggers mass emigration — over 2 million Jews leave the Russian Empire by 1914, mostly to the United States.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1894,
+    "title": "Dreyfus Affair",
+    "description": "French-Jewish officer Alfred Dreyfus is falsely convicted of treason, exposing deep antisemitism in Western Europe. Theodor Herzl, covering the trial, is inspired to launch political Zionism.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1897,
+    "title": "First Zionist Congress",
+    "description": "Theodor Herzl convenes the First Zionist Congress in Basel, Switzerland, founding the World Zionist Organization and declaring the goal of a Jewish homeland in Palestine.",
+    "impact": "migration"
+  },
+  {
+    "year": 1903,
+    "title": "Kishinev pogrom",
+    "description": "A devastating pogrom in Kishinev (modern Chișinău, Moldova) kills 49 Jews and injures hundreds. Galvanizes international Jewish organizations and accelerates emigration.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1917,
+    "title": "Balfour Declaration",
+    "description": "The British government declares support for 'the establishment in Palestine of a national home for the Jewish people,' shaping the future of Jewish migration to the region.",
+    "impact": "migration"
+  },
+  {
+    "year": 1920,
+    "title": "Immigration quotas in the US",
+    "description": "The Emergency Quota Act (1921) and Johnson-Reed Act (1924) severely restrict immigration to the US, closing the primary escape route for European Jews.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1933,
+    "title": "Hitler comes to power",
+    "description": "Adolf Hitler becomes Chancellor of Germany. Anti-Jewish legislation begins immediately, including boycotts of Jewish businesses and the first concentration camps.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1935,
+    "title": "Nuremberg Laws",
+    "description": "Nazi Germany enacts the Nuremberg Laws, stripping Jews of German citizenship and banning marriages between Jews and non-Jews.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1938,
+    "title": "Kristallnacht",
+    "description": "A coordinated pogrom across Nazi Germany and Austria. Synagogues burned, Jewish businesses destroyed, ~30,000 Jewish men sent to concentration camps. Marks the escalation to open violence.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1939,
+    "title": "World War II begins",
+    "description": "Germany invades Poland. World Jewish population reaches its all-time peak of approximately 16.6 million on the eve of the Holocaust.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1941,
+    "title": "The Holocaust begins",
+    "description": "Mass shootings by Einsatzgruppen in the Soviet Union, followed by systematic deportations to extermination camps. By 1945, approximately 6 million Jews are murdered.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1945,
+    "title": "End of World War II",
+    "description": "Liberation of concentration camps. World Jewish population reduced to approximately 11 million. Survivors seek refuge in displaced persons camps, Palestine, and the Americas.",
+    "impact": "persecution"
+  },
+  {
+    "year": 1948,
+    "title": "Establishment of Israel",
+    "description": "The State of Israel is declared. Mass immigration (aliyah) begins — over 700,000 Jews arrive in the first three years, including Holocaust survivors and Jews from Arab countries.",
+    "impact": "migration"
+  },
+  {
+    "year": 1950,
+    "title": "Mizrahi exodus begins",
+    "description": "Jews are expelled from or flee Arab and Muslim-majority countries. Over the next two decades, approximately 850,000 Mizrahi and Sephardic Jews leave Iraq, Yemen, Egypt, Morocco, Tunisia, Libya, and other countries — most resettling in Israel.",
+    "impact": "migration"
+  },
+  {
+    "year": 1956,
+    "title": "Suez Crisis — Egyptian Jews expelled",
+    "description": "Following the Suez Crisis, Egypt expels most of its remaining Jewish population and confiscates their property.",
+    "impact": "expulsion"
+  },
+  {
+    "year": 1967,
+    "title": "Six-Day War",
+    "description": "Israel captures the West Bank, Gaza, Sinai, and Golan Heights. Remaining Jews in several Arab countries face reprisals; most of Libya's Jews expelled.",
+    "impact": "migration"
+  },
+  {
+    "year": 1989,
+    "title": "Soviet Jewish emigration",
+    "description": "The fall of the Iron Curtain enables mass emigration of Soviet Jews. Over 1 million emigrate to Israel in the following decade; hundreds of thousands go to the US and Germany.",
+    "impact": "migration"
+  },
+  {
+    "year": 2015,
+    "title": "Rising antisemitism in Europe",
+    "description": "A wave of antisemitic attacks across Western Europe (Paris, Copenhagen, Brussels) accelerates Jewish emigration from France and other European countries to Israel.",
+    "impact": "migration"
+  }
+]
