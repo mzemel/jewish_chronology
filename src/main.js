@@ -15,11 +15,14 @@ let currentYear = 1;
 let svg, projection, pathGenerator, countriesGroup, tooltip;
 let countryFeatures = [];
 
+// Playback state
+let playInterval = null;
+let playDirection = 0; // 0 = stopped, 1 = forward, -1 = backward
+const STEP_MS = 500;
+
 async function init() {
-  // Load data first
   await loadData();
 
-  // Load world topology
   const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
   countryFeatures = topojson.feature(world, world.objects.countries).features;
 
@@ -28,9 +31,11 @@ async function init() {
   setupMap(countryFeatures);
   setupSlider();
   setupEventMarkers();
+  setupPlaybackControls();
   setupModal();
   updateMap(1);
   updateYearDisplay(1);
+  updateEventDisplay(1);
 }
 
 function buildCountryMapping() {
@@ -135,6 +140,7 @@ function setupSlider() {
   slider.value = 0;
 
   slider.addEventListener('input', (e) => {
+    stopPlayback();
     const year = sliderToYear(Number(e.target.value));
     currentYear = year;
     updateMap(year);
@@ -167,6 +173,7 @@ function setupEventMarkers() {
     marker.appendChild(tip);
 
     marker.addEventListener('click', () => {
+      stopPlayback();
       const slider = document.getElementById('year-slider');
       slider.value = sliderPos;
       currentYear = event.year;
@@ -178,6 +185,83 @@ function setupEventMarkers() {
     container.appendChild(marker);
   });
 }
+
+// --- Playback controls ---
+
+function setupPlaybackControls() {
+  const btnPlay = document.getElementById('btn-play');
+  const btnPause = document.getElementById('btn-pause');
+  const btnBackward = document.getElementById('btn-backward');
+
+  btnPlay.addEventListener('click', () => {
+    if (playDirection === 1) {
+      stopPlayback();
+    } else {
+      startPlayback(1);
+    }
+  });
+
+  btnPause.addEventListener('click', () => {
+    stopPlayback();
+  });
+
+  btnBackward.addEventListener('click', () => {
+    if (playDirection === -1) {
+      stopPlayback();
+    } else {
+      startPlayback(-1);
+    }
+  });
+}
+
+function startPlayback(direction) {
+  stopPlayback();
+  playDirection = direction;
+
+  const btnPlay = document.getElementById('btn-play');
+  const btnPause = document.getElementById('btn-pause');
+  const btnBackward = document.getElementById('btn-backward');
+
+  btnPlay.classList.toggle('active', direction === 1);
+  btnPlay.classList.add('hidden');
+  btnPause.classList.remove('hidden');
+  btnBackward.classList.toggle('active', direction === -1);
+
+  playInterval = setInterval(() => {
+    const slider = document.getElementById('year-slider');
+    const newVal = Number(slider.value) + direction;
+
+    if (newVal < 0 || newVal > Number(slider.max)) {
+      stopPlayback();
+      return;
+    }
+
+    slider.value = newVal;
+    const year = sliderToYear(newVal);
+    currentYear = year;
+    updateMap(year);
+    updateYearDisplay(year);
+    updateEventDisplay(year);
+  }, STEP_MS);
+}
+
+function stopPlayback() {
+  if (playInterval) {
+    clearInterval(playInterval);
+    playInterval = null;
+  }
+  playDirection = 0;
+
+  const btnPlay = document.getElementById('btn-play');
+  const btnPause = document.getElementById('btn-pause');
+  const btnBackward = document.getElementById('btn-backward');
+
+  btnPlay.classList.remove('active', 'hidden');
+  btnPause.classList.add('hidden');
+  btnBackward.classList.remove('active');
+}
+
+// --- Map updates ---
 
 function updateMap(year) {
   const data = getPopulationAtYear(year);
@@ -208,20 +292,24 @@ function updateYearDisplay(year) {
 
 function updateEventDisplay(year) {
   const display = document.getElementById('event-display');
+  const titleEl = display.querySelector('.event-title');
+  const descEl = display.querySelector('.event-description');
   const nearbyEvents = getEventsNearYear(year, 3);
 
   if (nearbyEvents.length === 0) {
     display.classList.remove('visible');
+    titleEl.textContent = '';
+    descEl.textContent = '';
     return;
   }
 
   const event = nearbyEvents[0];
   display.classList.add('visible');
-  display.innerHTML = `
-    <div class="event-title">${event.year} CE — ${event.title}</div>
-    <div class="event-description">${event.description}</div>
-  `;
+  titleEl.textContent = `${event.year} CE — ${event.title}`;
+  descEl.textContent = event.description;
 }
+
+// --- Mouse/click handlers ---
 
 function handleMouseOver(event, d) {
   const alpha3 = countryIdToAlpha3[d.id];
@@ -252,7 +340,7 @@ function handleMouseOut() {
 }
 
 function handleClick(event, d) {
-  // Placeholder for drill-down modal
+  stopPlayback();
 }
 
 function setupModal() {

@@ -110,7 +110,7 @@ header .subtitle {
 /* Timeline */
 #timeline-container {
   flex-shrink: 0;
-  padding: 12px 24px 20px;
+  padding: 12px 24px 28px;
   background: #16162a;
   border-top: 1px solid #2a2a4a;
 }
@@ -228,31 +228,76 @@ header .subtitle {
   box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
 }
 
-/* Event display */
+/* Event display — always takes up space, content fades in/out */
 #event-display {
-  min-height: 40px;
+  height: 48px;
   margin-top: 8px;
   padding: 8px 12px;
   font-size: 0.8rem;
   color: #ccc;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 4px;
-  display: none;
-}
-
-#event-display.visible {
-  display: block;
+  overflow: hidden;
 }
 
 #event-display .event-title {
   font-weight: 600;
   color: #ff6b6b;
   margin-bottom: 2px;
+  transition: opacity 0.2s;
 }
 
 #event-display .event-description {
   color: #999;
   line-height: 1.4;
+  transition: opacity 0.2s;
+}
+
+#event-display:not(.visible) .event-title,
+#event-display:not(.visible) .event-description {
+  opacity: 0;
+}
+
+#event-display.visible .event-title,
+#event-display.visible .event-description {
+  opacity: 1;
+}
+
+/* Playback controls */
+#playback-controls {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+#playback-controls button {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #444;
+  color: #ccc;
+  width: 32px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+#playback-controls button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+#playback-controls button.active {
+  background: rgba(255, 107, 107, 0.3);
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+#playback-controls button.hidden {
+  display: none;
 }
 
 /* Modal */

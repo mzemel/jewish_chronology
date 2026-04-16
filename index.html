@@ -21,13 +21,21 @@
     <div id="timeline-container">
       <div id="year-display">
         <span id="current-year">1 CE</span>
+        <div id="playback-controls">
+          <button id="btn-backward" title="Play backward">&#9664;&#9664;</button>
+          <button id="btn-play" title="Play">&#9654;</button>
+          <button id="btn-pause" title="Pause" class="hidden">&#9646;&#9646;</button>
+        </div>
         <span id="total-population"></span>
       </div>
       <div id="slider-wrapper">
         <div id="event-markers"></div>
         <input type="range" id="year-slider" min="0" max="1000" value="0">
       </div>
-      <div id="event-display"></div>
+      <div id="event-display">
+        <div class="event-title"></div>
+        <div class="event-description"></div>
+      </div>
     </div>
   </div>
 

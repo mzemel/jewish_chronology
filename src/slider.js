@@ -1,7 +1,8 @@
-// Stepped slider: maps a linear 0-1000 range to non-linear years
+// Stepped slider: maps a linear 0-N range to non-linear years
 // Denser steps for modern era, sparser for ancient history
+// Event years are merged in so playback always lands on every event
 
-const YEAR_STEPS = [
+const BASE_STEPS = [
   // Ancient: century steps (1-1000)
   1, 70, 135, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
   // Medieval: ~50-year steps (1000-1500)
@@ -17,6 +18,16 @@ const YEAR_STEPS = [
   2000, 2005, 2010, 2015, 2020
 ];
 
+// Event years to merge into the steps
+const EVENT_YEARS = [
+  224, 632, 711, 1096, 1144, 1182, 1290, 1306, 1348, 1394,
+  1492, 1497, 1516, 1569, 1648, 1654, 1740, 1772, 1791,
+  1881, 1894, 1897, 1903, 1917, 1956, 1967, 1989
+];
+
+// Merge and deduplicate
+const YEAR_STEPS = [...new Set([...BASE_STEPS, ...EVENT_YEARS])].sort((a, b) => a - b);
+
 export function getSliderMax() {
   return YEAR_STEPS.length - 1;
 }
@@ -27,7 +38,6 @@ export function sliderToYear(sliderValue) {
 }
 
 export function yearToSlider(year) {
-  // Find the closest step
   let closest = 0;
   let minDist = Infinity;
   for (let i = 0; i < YEAR_STEPS.length; i++) {
